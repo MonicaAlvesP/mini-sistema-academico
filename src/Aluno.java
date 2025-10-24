@@ -1,28 +1,26 @@
-/**
- * Classe que representa a entidade Aluno.
+/*
+ * Classe que representa a entidade Aluno
  * (Questão 1: Classe e Objeto)
- * (Questão 2: Encapsulamento aplicado)
- * (Questão 3: Herança aplicada - esta classe "herda" de Pessoa)
- * (Questão 4: Polimorfismo aplicado - método apresentar sobrescrito)
- * (Questão 5: Interface aplicada - esta classe "implementa" Avaliado)
+ * (Questão 2: Encapsulamento)
+ * (Questão 3: Herança)
+ * (Questão 4: Polimorfismo)
  */
 
 public class Aluno extends Pessoa implements Avaliado {
-  // --- Atributos (características) Específicos de Aluno ---
+  // --- Atributos (características) específicos do Aluno ---
   // --- Modificador de acesso private para encapsulamento ---
   private String matricula;
-  private String curso; // Novo atributo específico de Aluno
+  private String curso;
 
-  // --- Construtor para inicialização dos atributos ---
+  // --- Construtor para inicializar os atributos ---
   public Aluno(String nome, String matricula, String curso) {
-    super(nome); // Chama o construtor da classe pai (Pessoa)
+    super(nome); // Chama o construtor da superclasse (Pessoa)
     this.matricula = matricula;
     this.curso = curso;
   }
 
-  // --- Getters e Setters para acesso aos atributos ---
-  // Getter e Setter para nome (herdado automaticamente de Pessoa)
-
+  // --- Métodos getters para acessar os atributos ---
+  // Getter e Setter para nome (herda automaticamente de Pessoa)
   public String getMatricula() {
     return matricula;
   }
@@ -39,13 +37,15 @@ public class Aluno extends Pessoa implements Avaliado {
     this.curso = curso;
   }
 
-  @Override // Método sobrescrito para apresentar o aluno
+  // Sobrescreve o método apresentar() da classe Pessoa
+  @Override
   public String apresentar() {
-    return "Olá, meu nome é " + getNome() + ", estou cursando " + curso + " (matricula: " + matricula + ").";
+    return "Olá, meu nome é " + getNome() + " e eu sou aluno do curso de " + curso + ".";
   }
 
-  @Override // Implementação do método da interface Avaliado
+  // Implementa o método avaliar() da interface Avaliado
+  @Override
   public String avaliarDesempenho() {
-    return "Aluno " + getNome() + " obteve ótimo desempenho!";
+    return "Aluno " + getNome() + " obteve ótimo desempenho!.";
   }
 }

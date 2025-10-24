@@ -1,30 +1,29 @@
 public class Main {
   public static void main(String[] args) {
-    // Instanciando o objeto Aluno com o construtor e passando os valores
-    Aluno aluno_cesumar = new Aluno("Mônica Alves Pereira", "20254123-4", "Análise e Desenvolvimento de Sistemas");
+    // Instanciando um objeto da classe Aluno e passando valores para os atributos
+    Aluno aluno_cesumar = new Aluno("Mônica Alves", "24123214-5", "Análise e Desenvolvimento de Sistemas");
 
-    // Exibindo os dados adicionados
-    System.out.println("--- Dados do Aluno ---");
-    System.out.println("Nome: " + aluno_cesumar.getNome());
+    // Exibindo os dados
+    System.out.println("Bem Vindo ao nosso Sistema Acadêmico!");
+    System.out.println("Realizando busca de aluno...");
+    System.out.println("\n--- Dados do Aluno ---");
+    System.out.println("Aluno: " + aluno_cesumar.getNome() + ", Matrícula: " + aluno_cesumar.getMatricula());
 
-    // --- Encapsulamento ---
-    // Modificando os atributos usando os métodos setters
-    aluno_cesumar.setNome("Mônica A. Pereira");
-    System.out.println("Nome do Aluno atualizado: " + aluno_cesumar.getNome());
-    System.out.println("Matrícula: " + aluno_cesumar.getMatricula());
-    System.out.println("Curso: " + aluno_cesumar.getCurso());
-    // --- Polimorfismo ---
-    System.out.println(aluno_cesumar.apresentar());
-    // --- Interface ---
-    System.out.println(aluno_cesumar.avaliarDesempenho());
+    // --- Encapsulamento---
+    System.out.println("\nAtualizando nome do Aluno...");
+    aluno_cesumar.setNome("Mônica Alves Pereira");
+    System.out.println("Nome atualizado com sucesso!");
+    System.out.println("Nome: " + aluno_cesumar.getNome() + ", Matrícula: " + aluno_cesumar.getMatricula() + ", Curso: "
+        + aluno_cesumar.getCurso());
+    System.out.println(aluno_cesumar.apresentar()); // Polimorfismo
+    System.out.println(aluno_cesumar.avaliarDesempenho()); // Implementação da interface Avaliado
 
     // --- Herança ---
-    // Instanciando o objeto Professor que também herda de Pessoa
-    Professor prof_cesumar = new Professor("Mario Gárcia", "Orientação a Objetos");
+    // Instanciando um objeto da classe Professor que também herda de Pessoa
+    System.out.println("\nRealizando busca de professor...");
+    Professor prof_cesumar = new Professor("Mario Garcia", "Programação Orientada a Objetos");
     System.out.println("\n--- Dados do Professor ---");
-    System.out.println("Professor: " + prof_cesumar.getNome());
-    System.out.println("Disciplina: " + prof_cesumar.getDisciplina());
-    // --- Polimorfismo ---
-    System.out.println(prof_cesumar.apresentar());
+    System.out.println("Professor: " + prof_cesumar.getNome() + ", Disciplina: " + prof_cesumar.getDisciplina());
+    System.out.println(prof_cesumar.apresentar()); // Polimorfismo
   }
 }

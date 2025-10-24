@@ -22,8 +22,9 @@ public class Professor extends Pessoa {
     this.disciplina = disciplina;
   }
 
-  @Override // Método sobrescrito para apresentar o professor
+  // Sobrescreve o método apresentar() da classe Pessoa
+  @Override
   public String apresentar() {
-    return "Olá, sou o Professor " + getNome() + " e ensino sobre " + disciplina + " aqui na Unicesumar.";
+    return "Olá, meu nome é " + getNome() + " e eu ensino " + disciplina + " aqui na Unicesumar.";
   }
 }
