@@ -3,6 +3,7 @@
  * (Questão 1: Classe e Objeto)
  * (Questão 2: Encapsulamento aplicado)
  * (Questão 3: Herança aplicada - esta classe "herda" de Pessoa)
+ * (Questão 4: Polimorfismo aplicado - método apresentar sobrescrito)
  * (Questão 5: Interface aplicada - esta classe "implementa" Avaliado)
  */
 
